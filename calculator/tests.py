@@ -47,6 +47,6 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(TestCalculator))
+    suite.addTest(unittest.TestLoader().loadTestsFromTestCase(TestCalculator))
     runner = unittest.TextTestRunner()
     runner.run(suite)
